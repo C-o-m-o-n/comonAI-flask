@@ -18,10 +18,7 @@ configparser==3.8.1
 datadotworld==1.8.4
 datapackage==1.15.2
 distlib==0.3.6
-Django==3.0.5
-django-widget-tweaks==1.4.8
-dnspython==2.2.1
-docopt==0.6.2
+
 et-xmlfile==1.1.0
 eventlet==0.33.2
 filelock==3.9.0
@@ -54,9 +51,7 @@ MarkupPy==1.14
 MarkupSafe==2.1.1
 multidict==6.0.4
 openai==0.26.5
-openpyxl==3.1.0
-pew==1.2.0
-Pillow @ file:///home/builder/.termux-build/python-pillow/src
+
 pipenv==2022.12.19
 platformdirs==2.6.2
 pyjsparser==2.7.1
