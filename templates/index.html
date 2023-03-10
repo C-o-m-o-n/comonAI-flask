@@ -1,49 +1,96 @@
+
 {% extends 'base.html'%}
 <body>
 {% block content %}
-<ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Chat</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Imager</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Contact</button>
-  </li>
-</ul>
+	<div style="height: auto;"class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+<div class="col-md-4">
+             <br>
+          <div class="box  direct-chat direct-chat-warning">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Chat Messages</h3>
 
+                  <div class="box-tools pull-right">
+                    <span data-toggle="tooltip" title="" class="badge bg-primary" data-original-title="3 New Messages">20</span>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Contacts">
+                      <i class="fa fa-comments"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="box-body">
+                  
+                  <div class="direct-chat-messages">
+                    
+                    
+                   <!--  <div class="direct-chat-msg">
+                     <div class="direct-chat-info clearfix">
+                       <span  class="direct-chat-name pull-left">Timona Siera</span>
+                       <span id="gpt-timestamp" class="direct-chat-timestamp pull-right">
+                         
+                       </span>
+                     </div>
+                                
+                     <img class="direct-chat-img" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="message user image">
+                    
+                     
+                     <div id="gpt-message-display" class="direct-chat-text">
+                       
+                     </div>
+                    -->
+                    </div>      
+                  
+                  
 
-<div class="card m-4" style="height: 100vh; overflow: hidden;">
+<!--                     <div class="direct-chat-msg right">
+  <div class="direct-chat-info clearfix">
+             <span class="direct-chat-name pull-right">Sarah Bullock</span> -->
+          <!-- for displaying time -->
+                    <!-- <span class="direct-chat-timestamp pull-left"> </span>
+                      </div>
+                      -->
+          <!--             <img class="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image">
+                     -->
+<!-- for displaying input data -->
+                      <!-- <div id="message-display" class="direct-chat-text">
+                        
+                      </div>
+                                          
+                                          </div> -->
 
-  <div class="card-body m-2">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    
-    <div class="card">
-    <p>chatGpt</p>
-	<p class="card-text">{{ response["choices"][0]["text"] }}</p>
-	</div>
-	
+            
+            
+            
+                  </div>
+                 
+                </div>
+               
+          <div class="box-footer">
 
-  </div>
-  
-      <div class="card-bottom sticky-bottom">
-	<form method="POST" actio="{{ url_for('index')}}">
-		<div class="input-group">
-  			<span  class="input-group-text mb-3">user</span>
-  			<textarea class="form-control mb-3 " name="prompt"  aria-label="With textarea"></textarea></br>
-  			 <input type="submit" class="form-control mb-3" value="send">
-		</div>
-	</form>
-	</div>
-  
-</div>
-
-
-
-
-	
+                <div class="input-group">
+          <input type="text" name="prompt" placeholder="Type Message (<=20 words) ..." id="message-input" class= "form-control">
+                      <span class="input-group-btn">
+         <input style="color:white;"type="submit" id="send-btn" class=" btn small bg-primary rounded-2 shadow-smform-control" value="send">
+                          </span>
+                    </div>
+                  
+                </div>
+             
+              </div>
+           
+            </div>
+             </div>
+            
+              </div>
+             
+            </div>
 {% endblock content%}
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
 </body>
+
