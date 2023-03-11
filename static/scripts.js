@@ -1,7 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', () =>{
-  var socket = io.connect('https://' + document.domain + ':'+ location.port);
+  var socket = io.connect('//' + document.domain + ':'+ location.port);
   
   // socket.on('connect', function(){
   //   socket.send({'msg': 'successfully connected'})
