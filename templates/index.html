@@ -35,8 +35,6 @@
                        </span>
                      </div>
                                 
-                     <img class="direct-chat-img" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="message user image">
-                    
                      
                      <div id="gpt-message-display" class="direct-chat-text">
                        
@@ -53,8 +51,7 @@
                     <!-- <span class="direct-chat-timestamp pull-left"> </span>
                       </div>
                       -->
-          <!--             <img class="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image">
-                     -->
+          
 <!-- for displaying input data -->
                       <!-- <div id="message-display" class="direct-chat-text">
                         
@@ -88,6 +85,11 @@
               </div>
              
             </div>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+<script src="{{url_for('static', filename='scripts.js')}}"></script>
+
 {% endblock content%}
 </body>
 
