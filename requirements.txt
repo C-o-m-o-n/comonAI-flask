@@ -16,6 +16,7 @@ configparser==3.8.1
 datadotworld==1.8.4
 datapackage==1.15.2
 distlib==0.3.6
+dnspython==2.2.1
 eventlet==0.33.2
 filelock==3.9.0
 Flask==2.2.2
